@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="triangle" class="com.alac.demo.Triangle" init-method="myInit" destroy-method="myDestroy">
+		<!-- property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" /-->
+	</bean>
+	
+	<bean id="pointA" class="com.alac.demo.Point">
+		<property name="X" value="10" />
+		<property name="Y" value="10" />
+	</bean>
+	<bean id="pointB" class="com.alac.demo.Point">
+		<property name="X" value="20" />
+		<property name="Y" value="20" />
+	</bean>
+	<bean id="pointC" class="com.alac.demo.Point">
+		<property name="X" value="30" />
+		<property name="Y" value="30" />
+	</bean>
+	
+	<bean class="com.alac.demo.MyFactoryPostProcess"/>
+	
+	<bean class="com.alac.demo.MyBeanPostProcessor"/>
+	
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	
+</beans>
